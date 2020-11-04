@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Box, Heading } from "@chakra-ui/core";
 import ColorPicker from "../src/components/color-picker/color-picker";
-import { useState } from "react";
-import { ColorResult, Color } from "react-color";
+import React, { useState } from "react";
+import { Color } from "react-color";
 
 const defaultColor = {
   r: 38,
@@ -11,7 +11,7 @@ const defaultColor = {
   a: 1,
 };
 
-export default function Home() {
+const Home: React.FC = () => {
   const [color, setColor] = useState<Color>(defaultColor);
   return (
     <>
@@ -19,9 +19,11 @@ export default function Home() {
         <title>Color to CSS Filter</title>
       </Head>
       <Heading textAlign="center">Color to CSS Filter</Heading>
-      <Box>
+      <Box justifyContent="center" alignItems="center" m="0 auto">
         <ColorPicker setColor={setColor} color={color} />
       </Box>
     </>
   );
-}
+};
+
+export default Home;

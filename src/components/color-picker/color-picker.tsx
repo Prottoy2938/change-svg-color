@@ -1,6 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/core";
-import { SketchPicker, ColorResult, Color } from "react-color";
+import { SketchPicker, ColorResult } from "react-color";
 import { Props } from "./color-picker.model";
 
 const ColorPicker: React.FC<Props> = (props: Props) => {
