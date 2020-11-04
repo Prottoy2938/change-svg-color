@@ -47,18 +47,18 @@ const CSSFilterOutput: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <Box m="0 auto" mt={16} width="500px">
+    <Box m="0 auto" mt={16} mb={20} width="500px">
       <Heading as="h4" size="md" mb={5}>
         CSS Filter Output
       </Heading>
-      <CopyToClipboard text={cssFilterValue}>
-        <Highlight
-          {...defaultProps}
-          theme={theme}
-          code={cssFilterValue.trim()}
-          language="css"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      <Highlight
+        {...defaultProps}
+        theme={theme}
+        code={cssFilterValue.trim()}
+        language="css"
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <CopyToClipboard text={cssFilterValue}>
             <Box
               cursor="pointer"
               textAlign="left"
@@ -68,6 +68,7 @@ const CSSFilterOutput: React.FC<Props> = (props: Props) => {
               className={`codeContainer ${className}`}
               style={style}
               onClick={handleCopyClick}
+              height="100px"
             >
               {tokens.map((line) => (
                 <div {...getLineProps({ line })} key={uuid()}>
@@ -77,9 +78,9 @@ const CSSFilterOutput: React.FC<Props> = (props: Props) => {
                 </div>
               ))}
             </Box>
-          )}
-        </Highlight>
-      </CopyToClipboard>
+          </CopyToClipboard>
+        )}
+      </Highlight>
     </Box>
   );
 };

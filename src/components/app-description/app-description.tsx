@@ -19,17 +19,19 @@ const AppDescription: React.FC = () => {
         <AccordionItem>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              What's CSS Filter
+              About
             </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel pb={4}>
-            <Text lineHeight={7}>
+          <AccordionPanel pb={4} mt={8}>
+            <Heading as="h4" size="sm" mb={3}>
+              What's CSS Filter?
+            </Heading>
+            <Text lineHeight={7} mb={8}>
               The <Kbd>filter</Kbd> CSS property applies graphical effects like
               blur or color shift to an element. Filters are commonly used to
-              adjust the rendering of images, backgrounds, and borders.
-              <br />
-              More info about this on{" "}
+              adjust the rendering of images, backgrounds, and borders. More
+              details on{" "}
               <Link
                 title="CSS filter on MDN"
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"
@@ -38,6 +40,33 @@ const AppDescription: React.FC = () => {
               >
                 MDN
               </Link>
+              .
+            </Text>
+
+            <Heading as="h4" size="sm" mb={3}>
+              What's this Application?
+            </Heading>
+            <Text lineHeight={7} mb={8}>
+              This application converts Hex, Rgba, HSLA color to CSS filter.
+              Might be useful in adding color to svg.
+              <br />
+              See info about changing svg color on this{" "}
+              <Link
+                title="How to change the color of an svg element?"
+                href="https://stackoverflow.com/a/53336754/12966479"
+                color="purple"
+                textDecor="underline"
+              >
+                stackoverflow answer
+              </Link>
+              .
+            </Text>
+            <Heading as="h4" size="sm" mb={3}>
+              Other Info
+            </Heading>
+            <Text>
+              If you're looking for a CSS Filter generator to add graphical
+              effects to images, you might wanna go here.
             </Text>
           </AccordionPanel>
         </AccordionItem>

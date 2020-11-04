@@ -6,6 +6,7 @@ import { Color as ColorProps } from "react-color";
 import AppDescription from "../src/components/app-description/app-description";
 import CSSFilterOutput from "../src/components/css-filter-output/css-filter-output";
 import { Color, Solver } from "../src/algorithm/hex-to-css-filter";
+import SVGChangeDemo from "../src/components/svg-change-demo/svg-change-demo";
 
 const defaultColor = {
   r: 38,
@@ -24,19 +25,21 @@ const Home: React.FC = () => {
     const result = solver.solve();
     const filterCSS = result.filter;
     setCssFilterValue(filterCSS);
+    console.log(result.loss);
   }, [color]);
 
   return (
     <>
       <Head>
-        <title>Color to CSS Filter</title>
+        <title>Color Format to CSS Filter | Reative</title>
       </Head>
       <Heading textAlign="center" as="h1" mt={2}>
-        Color to CSS Filter
+        Color Format to CSS Filter
       </Heading>
       <Box justifyContent="center" alignItems="center" m="0 auto">
         <AppDescription />
         <ColorPicker setColor={setColor} color={color} />
+        <SVGChangeDemo cssFilterValue={cssFilterValue} />
         <CSSFilterOutput cssFilterValue={cssFilterValue} />
       </Box>
     </>
