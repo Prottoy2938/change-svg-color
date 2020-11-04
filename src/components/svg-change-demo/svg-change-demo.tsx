@@ -12,8 +12,12 @@ const SVGChangeDemo: React.FC<Props> = (props: Props) => {
           Filter applied to SVG
         </Heading>
         <Tooltip label="upload custom svg" aria-label="upload custom svg">
-          <Button size="sm">Upload</Button>
+          <label htmlFor="upload-svg" id="upload-svg-label">
+            upload
+          </label>
         </Tooltip>
+
+        <input type="file" accept="image/*" name="svg" id="upload-svg" />
       </Stack>
 
       <Image
