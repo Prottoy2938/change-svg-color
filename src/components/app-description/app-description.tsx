@@ -31,6 +31,7 @@ const AppDescription: React.FC = () => {
               <br />
               More info about this on{" "}
               <Link
+                title="CSS filter on MDN"
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"
                 color="purple"
                 textDecor="underline"
