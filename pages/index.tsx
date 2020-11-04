@@ -2,7 +2,6 @@ import Head from "next/head";
 import { Box, Heading } from "@chakra-ui/core";
 import ColorPicker from "../src/components/color-picker/color-picker";
 import React, { useState, useEffect } from "react";
-import { Color as ColorProps } from "react-color";
 import AppDescription from "../src/components/app-description/app-description";
 import CSSFilterOutput from "../src/components/css-filter-output/css-filter-output";
 import { Color, Solver } from "../src/algorithm/hex-to-css-filter";
@@ -12,16 +11,15 @@ const defaultColor = {
   r: 38,
   g: 23,
   b: 112,
-  a: 1,
 };
 
 const Home: React.FC = () => {
-  const [color, setColor] = useState<ColorProps>(defaultColor);
+  const [color, setColor] = useState(defaultColor);
   const [cssFilterValue, setCssFilterValue] = useState("");
 
   useEffect(() => {
-    const color = new Color(0, 255, 0);
-    const solver = new Solver(color);
+    const modifiedColorFormat = new Color(color.r, color.g, color.b);
+    const solver = new Solver(modifiedColorFormat);
     const result = solver.solve();
     const filterCSS = result.filter;
     setCssFilterValue(filterCSS);

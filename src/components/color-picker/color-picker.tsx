@@ -17,6 +17,7 @@ const ColorPicker: React.FC<Props> = (props: Props) => {
         className="color-picker"
         color={color}
         onChange={handleChange}
+        disableAlpha
       />
     </Box>
   );
