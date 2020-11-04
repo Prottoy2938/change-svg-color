@@ -15,6 +15,7 @@ import { Props } from "./css-filter-output.model";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwl";
+import { v4 as uuid } from "uuid";
 
 const CSSFilterOutput: React.FC<Props> = (props: Props) => {
   const { cssFilterValue } = props;
@@ -59,17 +60,19 @@ const CSSFilterOutput: React.FC<Props> = (props: Props) => {
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <Box
+              cursor="pointer"
               textAlign="left"
               margin="1em 0"
-              padding="0.5em"
-              overflow="scroll"
+              padding="1em 2em"
+              borderRadius="5px"
               className={`codeContainer ${className}`}
               style={style}
+              onClick={handleCopyClick}
             >
-              {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+              {tokens.map((line) => (
+                <div {...getLineProps({ line })} key={uuid()}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span {...getTokenProps({ token })} key={uuid()} />
                   ))}
                 </div>
               ))}
