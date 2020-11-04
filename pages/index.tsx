@@ -19,11 +19,13 @@ const Home: React.FC = () => {
       <Head>
         <title>Color to CSS Filter</title>
       </Head>
-      <Heading textAlign="center" as="h1">
+      <Heading textAlign="center" as="h1" mt={2}>
         Color to CSS Filter
       </Heading>
-      <AppDescription />
-      <ColorPicker setColor={setColor} color={color} />
+      <Box justifyContent="center" alignItems="center" m="0 auto">
+        <AppDescription />
+        <ColorPicker setColor={setColor} color={color} />
+      </Box>
     </>
   );
 };
