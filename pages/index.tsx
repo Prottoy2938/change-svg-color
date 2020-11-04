@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     const result = solver.solve();
     const filterCSS = result.filter;
     setCssFilterValue(filterCSS);
-    console.log(result.loss);
+    console.log(result.los);
   }, [color]);
 
   return (

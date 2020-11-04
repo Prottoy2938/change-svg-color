@@ -13,3 +13,8 @@ body {
 div div.sketch-picker {
   width: 300px !important;
 }
+
+.codeContainer .token-line {
+  line-height: 1.3em;
+  height: 1.3em;
+}
