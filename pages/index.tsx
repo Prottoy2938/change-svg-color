@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { Box, Heading } from "@chakra-ui/core";
-import ColorPicker from "../src/components/color-picker/color-picker";
+import ColorPicker from "../src/components/svg-color-converter-css-filter/color-picker/color-picker";
 import React, { useState, useEffect } from "react";
-import AppDescription from "../src/components/app-description/app-description";
-import CSSFilterOutput from "../src/components/css-filter-output/css-filter-output";
+import AppDescription from "../src/components/svg-color-converter-css-filter/app-description/app-description";
+import CSSFilterOutput from "../src/components/svg-color-converter-css-filter/css-filter-output/css-filter-output";
 import { Color, Solver } from "../src/algorithm/hex-to-css-filter";
-import SVGChangeDemo from "../src/components/svg-change-demo/svg-change-demo";
+import SVGChangeDemo from "../src/components/svg-color-converter-css-filter/svg-change-demo/svg-change-demo";
 
 const defaultColor = {
   r: 38,
@@ -47,10 +47,10 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>SVG Color Converter | Reative</title>
+        <title>Change SVG Color Using CSS Filter</title>
       </Head>
       <Heading textAlign="center" as="h1" mt={2}>
-        SVG Color Converter
+        Change SVG Color Using CSS Filter
       </Heading>
       <Box justifyContent="center" alignItems="center" m="0 auto">
         <AppDescription />
