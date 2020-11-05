@@ -23,7 +23,7 @@ const SVGChangeDemo: React.FC<Props> = (props: Props) => {
     <Box m="0 auto" width="500px" mt={16}>
       <Stack isInline>
         <Heading flex={1} as="h4" size="md" mb={5}>
-          Filter applied to Image
+          Filter applied to SVG
         </Heading>
         <Tooltip label="upload custom image" aria-label="upload custom image">
           <label htmlFor="upload-svg" id="upload-svg-label">

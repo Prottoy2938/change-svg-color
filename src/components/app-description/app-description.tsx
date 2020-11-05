@@ -47,8 +47,8 @@ const AppDescription: React.FC = () => {
               What's this Application?
             </Heading>
             <Text lineHeight={7} mb={8}>
-              This application converts Hex, Rgba, HSLA color to CSS filter.
-              Might be useful in adding color to svg.
+              This application converts Hex, Rgba, HSLA color to CSS filter. And
+              the CSS filter could be used to change the svg color.
               <br />
               See info about changing svg color on this{" "}
               <Link

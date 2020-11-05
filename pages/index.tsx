@@ -47,10 +47,10 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Color Format to CSS Filter | Reative</title>
+        <title>SVG Color Converter | Reative</title>
       </Head>
       <Heading textAlign="center" as="h1" mt={2}>
-        Color Format to CSS Filter
+        SVG Color Converter
       </Heading>
       <Box justifyContent="center" alignItems="center" m="0 auto">
         <AppDescription />
