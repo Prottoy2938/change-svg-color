@@ -16,6 +16,10 @@ const defaultColor = {
 const Home: React.FC = () => {
   const [color, setColor] = useState(defaultColor);
   const [cssFilterValue, setCssFilterValue] = useState("");
+  const [lossInfo, setLossInfo] = useState({
+    loss: 0,
+    lossMsg: "This is perfect",
+  });
 
   useEffect(() => {
     const modifiedColorFormat = new Color(color.r, color.g, color.b);
@@ -23,7 +27,21 @@ const Home: React.FC = () => {
     const result = solver.solve();
     const filterCSS = result.filter;
     setCssFilterValue(filterCSS);
-    console.log(result.loss);
+    if (result.loss < 1) {
+      setLossInfo({ loss: result.loss, lossMsg: "This is perfect" });
+    } else if (result.loss < 5) {
+      setLossInfo({ loss: result.loss, lossMsg: "This is close enough" });
+    } else if (result.loss < 15) {
+      setLossInfo({
+        loss: result.loss,
+        lossMsg: "This color is somewhat off. Consider trying different color.",
+      });
+    } else {
+      setLossInfo({
+        loss: result.loss,
+        lossMsg: "This color is extremely off. Try different color",
+      });
+    }
   }, [color]);
 
   return (
@@ -37,7 +55,7 @@ const Home: React.FC = () => {
       <Box justifyContent="center" alignItems="center" m="0 auto">
         <AppDescription />
         <ColorPicker setColor={setColor} color={color} />
-        <SVGChangeDemo cssFilterValue={cssFilterValue} />
+        <SVGChangeDemo cssFilterValue={cssFilterValue} lossInfo={lossInfo} />
         <CSSFilterOutput cssFilterValue={cssFilterValue} />
       </Box>
     </>
