@@ -48,7 +48,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Change SVG Color Using CSS Filter</title>
+        <title>Change SVG Color Using CSS Filter | Reative</title>
       </Head>
       <Heading textAlign="center" as="h1" mt={2}>
         Change SVG Color Using CSS Filter

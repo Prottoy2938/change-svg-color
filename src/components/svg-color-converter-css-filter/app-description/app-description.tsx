@@ -48,9 +48,9 @@ const AppDescription: React.FC = () => {
             </Heading>
             <Text lineHeight={7} mb={8}>
               This application converts Hex, Rgba, HSLA color to CSS filter. And
-              the CSS filter could be used to change the svg color.
+              the CSS filter could be used to change the SVG color.
               <br />
-              See info about changing svg color on this{" "}
+              See info about changing SVG color on this{" "}
               <Link
                 title="How to change the color of an svg element?"
                 href="https://stackoverflow.com/a/53336754/12966479"
