@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Heading,
-  Textarea,
   useToast,
   Alert,
   AlertIcon,

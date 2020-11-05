@@ -6,6 +6,7 @@ import AppDescription from "../src/components/svg-color-converter-css-filter/app
 import CSSFilterOutput from "../src/components/svg-color-converter-css-filter/css-filter-output/css-filter-output";
 import { Color, Solver } from "../src/algorithm/hex-to-css-filter";
 import SVGChangeDemo from "../src/components/svg-color-converter-css-filter/svg-change-demo/svg-change-demo";
+import Drawer from "../src/components/svg-color-converter-css-filter/drawer/drawer";
 
 const defaultColor = {
   r: 38,
@@ -54,6 +55,7 @@ const Home: React.FC = () => {
       </Heading>
       <Box justifyContent="center" alignItems="center" m="0 auto">
         <AppDescription />
+        <Drawer />
         <ColorPicker setColor={setColor} color={color} />
         <SVGChangeDemo cssFilterValue={cssFilterValue} lossInfo={lossInfo} />
         <CSSFilterOutput cssFilterValue={cssFilterValue} />
