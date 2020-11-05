@@ -50,6 +50,18 @@ const Home: React.FC = () => {
       <Head>
         <title>Change SVG Color Using CSS Filter</title>
         <link rel="shortcut icon" href="/logo.svg" />
+        <meta
+          name="description"
+          content="Change color of a svg using CSS filter"
+        />
+        <meta
+          name="og:description"
+          content="Change color of a svg using CSS filter"
+        />
+        <meta
+          property="og:image"
+          content="https://change-svg-color.vercel.app/app-preview.jpg"
+        />
       </Head>
       <Heading textAlign="center" as="h1" mt={2}>
         Change SVG Color Using CSS Filter
