@@ -10,6 +10,7 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  Code,
 } from "@chakra-ui/core";
 
 const AppDescription: React.FC = () => {
@@ -37,6 +38,8 @@ const AppDescription: React.FC = () => {
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"
                 color="purple"
                 textDecor="underline"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 MDN
               </Link>
@@ -60,13 +63,7 @@ const AppDescription: React.FC = () => {
                 stackoverflow answer
               </Link>
               .
-            </Text>
-            <Heading as="h4" size="sm" mb={3}>
-              Other Info
-            </Heading>
-            <Text>
-              If you're looking for a CSS Filter generator to add graphical
-              effects to images, you might wanna go here.
+              <br />
             </Text>
           </AccordionPanel>
         </AccordionItem>

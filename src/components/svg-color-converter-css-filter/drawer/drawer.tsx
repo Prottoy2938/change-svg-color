@@ -13,6 +13,7 @@ import {
 import { BsBoundingBox } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { BsCodeSlash } from "react-icons/bs";
+import { ImNewspaper } from "react-icons/im";
 
 const DashboardDrawer: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,6 +53,16 @@ const DashboardDrawer: React.FC = () => {
                 mb={6}
               >
                 Converter Algorithm
+              </Button>
+            </a>
+            <a href="https://blog.edrini.xyz/posts/change-svg-color">
+              <Button
+                leftIcon={<ImNewspaper />}
+                justifyContent="space-around"
+                width="100%"
+                mb={6}
+              >
+                How its build
               </Button>
             </a>
             <Tooltip
